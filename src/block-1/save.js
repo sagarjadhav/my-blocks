@@ -4,7 +4,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import classnames from 'classnames';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -13,12 +14,27 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
  *
+ * @param {Object} props            Block props.
+ * @param {Object} props.attributes Block's attributes.
+ *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( { attributes } ) {
+	const { text, alignment, shadow, shadowOpacity } = attributes;
+
+	// Set Class
+	const classes = classnames( `text-align-${ alignment }`, {
+		'has-shadow': shadow,
+		[ `shadow-opacity-${ shadowOpacity }` ]: shadow && shadowOpacity,
+	} );
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'My Blocks – hello from the saved content!' }
-		</p>
+		<RichText.Content
+			{ ...useBlockProps.save( {
+				className: classes,
+			} ) }
+			tagName="h2"
+			value={ text }
+		/>
 	);
 }

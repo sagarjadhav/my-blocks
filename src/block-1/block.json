@@ -1,17 +1,56 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "create-block/my-block1",
+	"name": "create-block/block1",
 	"version": "0.1.0",
 	"title": "My Blocks 1",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		}
 	},
 	"textdomain": "my-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"styles": [
+		{
+			"name": "squared",
+			"label": "Squared",
+			"isDefault": true
+		}, {
+			"name": "rounded",
+			"label": "Rounded"
+		}
+	],
+	"attributes": {
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"shadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowOpacity": {
+			"type": "number",
+			"default": 30
+		}
+	}
 }

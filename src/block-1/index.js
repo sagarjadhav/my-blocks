@@ -27,6 +27,18 @@ import metadata from './block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType( metadata.name, {
+	icon: {
+		src: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+				<path
+					fill="currentColor"
+					fillRule="evenodd"
+					d="M0 2h20v2H0zM0 16h20v2H0zM0 9.2h8v1.5H0zM15.9 13l-3.8-3.9 1-1 2.8 2.7 2.8-2.7 1 1z"
+				/>
+			</svg>
+		),
+	},
+
 	/**
 	 * @see ./edit.js
 	 */

@@ -25,5 +25,9 @@
 		"@wordpress/scripts": "^24.3.0",
 		"@wordpress/stylelint-config": "^21.2.0",
 		"husky": "^8.0.1"
+	},
+	"dependencies": {
+		"@wordpress/components": "^21.2.0",
+		"classnames": "^2.3.2"
 	}
 }
