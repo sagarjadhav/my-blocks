@@ -23,7 +23,8 @@
 			"name": "squared",
 			"label": "Squared",
 			"isDefault": true
-		}, {
+		},
+		{
 			"name": "rounded",
 			"label": "Rounded"
 		}
