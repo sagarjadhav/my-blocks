@@ -21,7 +21,11 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_my_blocks_block_init() {
+	register_block_type( __DIR__ . '/build/example' );
 	register_block_type( __DIR__ . '/build/block-1' );
 	register_block_type( __DIR__ . '/build/block-2' );
+	register_block_type( __DIR__ . '/build/team-members' );
+	register_block_type( __DIR__ . '/build/team-member' );
+	register_block_type( __DIR__ . '/build/block-template' );
 }
 add_action( 'init', 'create_block_my_blocks_block_init' );

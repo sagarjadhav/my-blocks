@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/team-member",
+	"version": "0.1.0",
+	"title": "Team Member",
+	"category": "widgets",
+	"icon": "admin-users",
+	"parent": [ "create-block/team-members" ],
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"source": "html",
+			"selector": "h4"
+		},
+		"bio": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		}
+	},
+	"textdomain": "my-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
