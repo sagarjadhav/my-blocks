@@ -27,5 +27,14 @@ function create_block_my_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/team-members' );
 	register_block_type( __DIR__ . '/build/team-member' );
 	register_block_type( __DIR__ . '/build/block-template' );
+	register_block_type( __DIR__ . '/build/accordion' );
+	register_block_type( __DIR__ . '/build/accordion/accordion-item' );
 }
 add_action( 'init', 'create_block_my_blocks_block_init' );
+
+function my_blocks_load_scripts() {
+	if ( ! is_admin() && has_block( 'create-block/accordion' ) ) {
+		wp_enqueue_script( 'accordion_js', plugins_url( './src/accordion/accordion.js', __FILE__ ));
+	}
+}
+add_action('wp_enqueue_scripts', 'my_blocks_load_scripts');

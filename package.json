@@ -17,7 +17,10 @@
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
-		"extends": "@wordpress/stylelint-config/scss"
+		"extends": "@wordpress/stylelint-config/scss",
+		"rules": {
+			"selector-class-pattern": null
+		}
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^13.3.0",

@@ -1,7 +1,7 @@
 {
-  "extends": [ "@wordpress/stylelint-config/scss", "prettier" ],
-  "rules": {
-	"selector-class-pattern": null,
-	"no-descending-specificity": null
+	"extends": [ "@wordpress/stylelint-config/scss", "prettier" ],
+	"rules": {
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
   }
 }
