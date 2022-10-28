@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-tabs {
+
+	.tab-labels {
+		margin: 0;
+		padding: 0;
+
+		.tab-label {
+			cursor: pointer;
+			display: inline-block;
+			list-style: none;
+			margin-right: 20px;
+
+			&.active {
+				color: #f00;
+			}
+		}
+	}
+
+	.tab-content {
+
+		.tab-panel {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
