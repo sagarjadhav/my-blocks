@@ -42,5 +42,12 @@ function my_blocks_load_scripts() {
 	if ( ! is_admin() && has_block( 'create-block/tabs' ) ) {
 		wp_enqueue_script( 'tabs_js', plugins_url( './src/tabs/tabs.js', __FILE__ ));
 	}
+
+	if ( ! is_admin() ) {
+		wp_enqueue_script( 'slick_js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+		wp_enqueue_style( 'slick_css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+
+		wp_enqueue_script( 'frontend_js', plugins_url( './src/filters/frontend.js', __FILE__ ), array('jquery'));
+	}
 }
 add_action('wp_enqueue_scripts', 'my_blocks_load_scripts');
