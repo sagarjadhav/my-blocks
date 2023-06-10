@@ -6,7 +6,7 @@
 	"title": "Team Members",
 	"category": "widgets",
 	"icon": "groups",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Team members block",
 	"supports": {
 		"html": false
 	},
